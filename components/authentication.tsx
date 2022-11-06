@@ -56,7 +56,7 @@ export default function BasicModal() {
                             />
                         </div>
                         <header>
-                            <div className='items-center'>
+                            <div className='px-28'>
                                 <Button className='rounded text-white font-semibold bg-black hover:bg-slate-600 py-2 px-5' onClick={handleClose}>enviar</Button>
                             </div>
                         </header>

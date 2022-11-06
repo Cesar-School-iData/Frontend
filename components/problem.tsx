@@ -4,9 +4,9 @@ import Authentication from '../components/authentication'
 function problem() {
     return (
         <div>
-            <div>
-                <div className='rounded-md flex cursor-pointer border border-gray-300 bg-white shadow-sm hover:border hover:border-gray-600'>
-                    {/* Votes */}
+            <div className='py-2 px-2'>
+                <div className='flex rounded-md cursor-pointer border border-gray-300 bg-white shadow-sm hover:border hover:border-gray-600'>
+                    {/* Votes  max-w-3xl*/}
                     <div>
                         <Authentication />
                     </div>

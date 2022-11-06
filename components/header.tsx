@@ -23,7 +23,9 @@ export default function BasicModal() {
 
     return (
         <div>
-            <Button className="text-white bg-black px-7 py-1 rounded-full" onClick={handleOpen}>Entrar</Button>
+            <div className='justify-left py-2 px-4'>
+                <Button className="text-white font-semibold bg-black hover:bg-slate-600 px-7 py-1 rounded-full" onClick={handleOpen}>Entrar</Button>
+            </div>
             <Modal
                 open={open}
             >
@@ -50,7 +52,7 @@ export default function BasicModal() {
                             />
                         </div>
                         <header>
-                            <div className='items-center'>
+                            <div className='px-28'>
                                 <Button className='rounded text-white font-semibold bg-black hover:bg-slate-600 py-2 px-5' onClick={handleClose}>entrar</Button>
                             </div>
                         </header>
