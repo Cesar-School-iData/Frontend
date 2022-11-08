@@ -1,5 +1,5 @@
 import React from 'react'
-import Authentication from './authentication'
+import Authentication from '../components/authentication'
 
 function problemCount() {
     return (

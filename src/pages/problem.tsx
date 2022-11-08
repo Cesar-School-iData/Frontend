@@ -5,10 +5,10 @@ import QrCode from '../components/newProblem'
 function problem() {
   return (
     <div>
-        <div className=''>    
+      <div className=''>
         <ProblemReport />
         <QrCode />
-        </div>
+      </div>
     </div>
   )
 }

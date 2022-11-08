@@ -18,7 +18,7 @@ export default function Home() {
         <Link href="/problem">
           <button className='text-white bg-black px-8 py-1 rounded-full border-gray-600 border shadow-sm hover:border hover:border-gray-300'>Quero reportar um problema!</button>
         </Link>
-      <Adm />
+        <Adm />
       </div>
     </div>
   )
