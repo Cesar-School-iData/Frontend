@@ -4,7 +4,7 @@ import Authentication from '../components/authentication'
 function problemCount() {
     return (
         <div>
-            <div className='py-2 px-2'>
+            <div className='py-44 px-2'>
                 <div className='flex rounded-md cursor-pointer border border-gray-300 bg-white shadow-sm hover:border hover:border-gray-600'>
                     {/* Votes  max-w-3xl*/}
                     <div>

@@ -23,7 +23,7 @@ export default function BasicModal() {
 
     return (
         <div>
-            <div className='justify-left'>
+            <div className='flex justify-center sm:px-6 lg:px-8'>
                 <button className="text-gray-700 bg-white border-gray-300 border shadow-sm hover:border hover:border-gray-600 px-14 py-1 rounded-full" onClick={handleOpen}>Sou um administrador</button>
             </div>
             <Modal
