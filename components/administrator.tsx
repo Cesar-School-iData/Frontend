@@ -23,8 +23,8 @@ export default function BasicModal() {
 
     return (
         <div>
-            <div className='justify-left py-2 px-4'>
-                <Button className="text-white font-semibold bg-black hover:bg-slate-600 px-7 py-1 rounded-full" onClick={handleOpen}>Entrar</Button>
+            <div className='justify-left'>
+                <button className="text-gray-700 bg-white border-gray-300 border shadow-sm hover:border hover:border-gray-600 px-14 py-1 rounded-full" onClick={handleOpen}>Sou um administrador</button>
             </div>
             <Modal
                 open={open}

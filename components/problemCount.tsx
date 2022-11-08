@@ -1,7 +1,7 @@
 import React from 'react'
-import Authentication from '../components/authentication'
+import Authentication from './authentication'
 
-function problem() {
+function problemCount() {
     return (
         <div>
             <div className='py-2 px-2'>
@@ -20,7 +20,7 @@ function problem() {
     )
 }
 
-export default problem
+export default problemCount
 
 /*
     <div className='flex  max-w-md shadow border-b'>
