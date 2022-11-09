@@ -1,5 +1,6 @@
 import React from 'react'
-import ProblemReport from '../components/problemCount'
+import ProblemReport from '../components/problemBoard'
+import ProblemFilter from '../components/filter'
 
 function problem() {
   const qrcode = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -18,12 +19,15 @@ function problem() {
             <button className="flex text-white bg-black px-8 py-1 rounded-full border-gray-600 border shadow-sm hover:border hover:border-gray-300" onClick={qrcode}>Quero reportar um novo problema</button>
           </div>
           <h2 className='text-5xl text-start font-semibold mt-12 px-14'>Seu problema se encontra aqui?</h2>
-          <div className='flex space-x-48 px-14'>
+          <div className='flex space-x-52 px-14'>
             <h3 className='text-3xl font-semibold mt-12 flex'>Problemas reportados</h3>
             <h3 className='text-3xl font-semibold mt-12 flex'>Filtro</h3>
           </div>
         </div>
-        <ProblemReport />
+        <div className='flex -space-x-12'>
+          <ProblemReport />
+          <ProblemFilter />
+        </div>
       </div>
     </div>
   )

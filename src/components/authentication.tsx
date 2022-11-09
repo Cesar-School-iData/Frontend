@@ -23,7 +23,7 @@ export default function BasicModal() {
 
     return (
         <div>
-            <div className='flex flex-col items-center justify-start space-y-1 rounded-l-md bg-gray-50 p-7 text-gray-400'>
+            <div className='flex flex-col items-center space-y-1 -mt-12 rounded-l-md p-1 text-gray-400'>
                 <button onClick={handleOpen}>
                     <img className='voteButtons hover:text-blue-400' src="https://img.icons8.com/sf-regular/48/null/up.png" />
                 </button>
