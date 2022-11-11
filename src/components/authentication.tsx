@@ -23,11 +23,11 @@ export default function BasicModal() {
 
     return (
         <div>
-            <div className='flex flex-col items-center space-y-1 -mt-12 rounded-l-md p-1 text-gray-400'>
-                <button onClick={handleOpen}>
+            <div className='text-gray-400'>
+                <button onClick={handleOpen} className="flex my-auto">
                     <img className='voteButtons hover:text-blue-400' src="https://img.icons8.com/sf-regular/48/null/up.png" />
+                    <span className='text-xs font-bold text-black my-auto'>0</span>
                 </button>
-                <p className='text-xs font-bold text-black'>0</p>
             </div>
             <Modal
                 open={open}
@@ -55,9 +55,12 @@ export default function BasicModal() {
                                 }}
                             />
                         </div>
-                        <header>
-                            <div className='px-28'>
+                        <header className="flex flex-col">
+                            <div className='mx-auto'>
                                 <Button className='rounded text-white font-semibold bg-black hover:bg-slate-600 py-2 px-5' onClick={handleClose}>enviar</Button>
+                            </div>
+                            <div className='mx-auto'>
+                                <Button className='rounded text-white font-semibold bg-black hover:bg-slate-600 py-2 px-5' onClick={handleClose}>cancelar</Button>
                             </div>
                         </header>
                     </Box>

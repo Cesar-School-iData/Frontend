@@ -16,7 +16,7 @@ export default function Home() {
           <h3 className='text-base font-semibold mt-7 flex'>Ajuda</h3>
         </div>
         <h1 className='text-6xl text-center font-semibold mt-36'>IData</h1>
-        <h2 className='text-center font-semibold mt-6'>TEXTO</h2>
+        <h2 className='text-center font-semibold mt-6 mx-auto w-1/3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corporis debitis incidunt, et facilis a libero totam fugit ducimus, quibusdam nesciunt quos esse architecto consectetur.</h2>
         <div className='mt-16 pb-6 flex justify-center sm:px-6 lg:px-8'>
           <Link href="/problem">
             <button className='flex text-white bg-black px-8 py-1 rounded-full border-gray-600 border shadow-sm hover:border hover:border-gray-300'>Quero reportar um problema!</button>
