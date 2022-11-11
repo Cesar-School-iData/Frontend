@@ -1,5 +1,5 @@
 import React from 'react'
-import ProblemReport from '../components/problemBoard'
+import ProblemReport from '../components/problemList'
 import ProblemFilter from '../components/filter'
 
 function problem() {

@@ -4,8 +4,8 @@ import Authentication from './authentication'
 function teste() {
   return (
     <div className='py-44 px-14'>
-      <div className="px-8 max-w-md h-96 bg-gray-300 rounded-3xl border border-gray-400 shadow-sm space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
-        <div className='scroll-pb-6 sanp-start py-4 px-8 w-96 h-40 bg-white rounded-3xl shadow-2xl hover:border hover:border-gray-600'>
+      <div className="container mx-auto px-8 max-w-md h-96 bg-gray-300 rounded-3xl border border-gray-400 shadow-sm space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+        <div className='py-4 px-8 w-96 h-40 bg-white rounded-3xl shadow-2xl hover:border hover:border-gray-600'>
           <div className="text-center space-y-2 sm:text-left">
             <div className="space-y-5">
               <div>
