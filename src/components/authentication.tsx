@@ -1,30 +1,15 @@
 import { Dialog, Transition } from '@headlessui/react'
+import Modal from '@mui/material/Modal';
 import React from "react";
 import { Fragment, useState } from 'react'
 
 function authentification() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isOpenSection, setIsOpenSection] = useState(true)
-
-    function closeModal() {
-        setIsOpen(false);
-    }
-
-    function openModal() {
-        setIsOpen(true);
-    }
-
-    function closeModalNextSection() {
-        setIsOpenSection(false)
-    }
-
-    function openModalNextSection() {
-        setIsOpenSection(true)
-    }
-
-    function loading() {
-        setIsOpenSection(true)
-    }
+    const [isOpen, setIsOpen] = React.useState(false);
+    const openModal = () => setIsOpen(true);
+    const closeModal = () => setIsOpen(false);
+    const [isOpenSection, setIsOpenSection] = React.useState(false);
+    const openModalNextSection = () => setIsOpenSection(true);
+    const closeModalNextSection = () => setIsOpenSection(false);
 
     return (
         <>
@@ -50,7 +35,22 @@ function authentification() {
                                     <button className='absolute top-2 right-4 rounded-full text-black font-semibold hover:bg-blue-50 py-0 px-2' onClick={closeModal}>X</button>
                                     <p className='text-slate-600 font-medium'>Para prosseguir, por favor, informe o seu e-mail institucional</p>
                                     <input type="text" name="email" className="w-full rounded-lg border mt-3 py-3 px-4 border-gray-600"></input>
-                                    <button className='absolute bottom-11 inset-x-24 rounded-full text-white font-semibold bg-black hover:bg-slate-600 py-2 px-5' onClick={openModalNextSection}>Avançar</button>
+                                    <div>
+                                        <button className='absolute bottom-11 inset-x-24 rounded-full text-white font-semibold bg-black hover:bg-slate-600 py-2 px-5' onClick={openModalNextSection}>Avançar</button>
+                                        <Modal open={isOpenSection}>
+                                            <div className='bg-white rounded-3xl shadow-2xl container max-w-sm h-80 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                                                <header className="flex flex-col px-5 py-11">
+                                                    <button className='absolute top-2 left-4 rounded-full text-black font-semibold hover:bg-blue-50 py-0 px-2' onClick={closeModalNextSection}>-</button>
+                                                    <button className='absolute top-2 right-4 rounded-full text-black font-semibold hover:bg-blue-50 py-0 px-2' onClick={closeModal}>X</button>
+                                                    <p className='text-slate-600 font-medium'>Deseja incluir um comentário adicional sobre o problema?</p>
+                                                    <input type="text" name="observacao" className="w-full rounded-lg border mt-3 py-3 px-4 border-gray-600"></input>
+                                                    <button className='absolute bottom-11 inset-x-24 rounded-full text-white font-semibold bg-black hover:bg-slate-600 py-2 px-5' onClick={closeModal}>Concluir</button>
+                                                    <div className='bg-gray-300 rounded-full h-3 w-3 absolute bottom-3 inset-x-44'></div>
+                                                    <div className='bg-gray-600 rounded-full h-3 w-3 absolute bottom-3 inset-x-52'></div>
+                                                </header>
+                                            </div>
+                                        </Modal>
+                                    </div>
                                     <div className='bg-gray-600 rounded-full h-3 w-3 absolute bottom-3 inset-x-44'></div>
                                     <div className='bg-gray-300 rounded-full h-3 w-3 absolute bottom-3 inset-x-52'></div>
                                 </header>
@@ -64,21 +64,3 @@ function authentification() {
 };
 
 export default authentification
-
-/*
-<Transition appear show={isOpenSection} as={Fragment}>
-                <Dialog as="div" onClose={closeModalNextSection}>
-                    <div className='bg-white rounded-3xl shadow-2xl container max-w-sm h-80 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                        <header className="flex flex-col px-5 py-11">
-                            <button className='absolute top-2 left-4 rounded-full text-black font-semibold hover:bg-blue-50 py-0 px-2' onClick={closeModalNextSection}>-</button>
-                            <button className='absolute top-2 right-4 rounded-full text-black font-semibold hover:bg-blue-50 py-0 px-2' onClick={closeModal}>X</button>
-                            <p className='text-slate-600 font-medium'>Deseja incluir um comentário adicional sobre o problema?</p>
-                            <input type="text" name="observacao" className="w-full rounded-lg border mt-3 py-3 px-4 border-gray-600"></input>
-                            <button className='absolute bottom-11 inset-x-24 rounded-full text-white font-semibold bg-black hover:bg-slate-600 py-2 px-5' onClick={loading}>Concluir</button>
-                            <div className='bg-gray-300 rounded-full h-3 w-3 absolute bottom-3 inset-x-44'></div>
-                            <div className='bg-gray-600 rounded-full h-3 w-3 absolute bottom-3 inset-x-52'></div>
-                        </header>
-                    </div>
-                </Dialog>
-            </Transition>
-*/
