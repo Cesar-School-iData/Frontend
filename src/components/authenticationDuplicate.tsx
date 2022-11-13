@@ -13,12 +13,7 @@ function authentification() {
 
   return (
     <>
-      <div className='text-gray-400'>
-        <button onClick={openModal} className="flex my-auto">
-          <img className='voteButtons hover:text-blue-400' src="https://img.icons8.com/sf-regular/48/null/up.png" />
-          <span className='text-xs font-bold text-black my-auto'>0</span>
-        </button>
-      </div>
+      <button className='text-sm absolute top-44 right-7 rounded-full text-white font-semibold bg-black hover:bg-slate-600 py-1 px-3' onClick={openModal}>Tenho o mesmo problema!</button>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" onClose={closeModal}>
           <Transition.Child

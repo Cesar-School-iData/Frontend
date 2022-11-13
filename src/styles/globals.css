@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 @layer components {
-    .voteButtons {
-        @apply h-6 w-6 hover:bg-gray-200 p-1 rounded-full
-    }
+  .voteButtons {
+    @apply h-6 w-6 hover:bg-gray-200 p-1 rounded-full
+  }
 }
 
 .blur-all {
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
