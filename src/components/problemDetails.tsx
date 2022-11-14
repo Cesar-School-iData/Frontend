@@ -27,40 +27,42 @@ function authentification() {
             leave="ease-in duration-200">
             <div className="fixed inset-0 bg-black bg-opacity-50">
               <div className='bg-stone-100 rounded-3xl shadow-2xl container max-w-lg max-h-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <header className="flex flex-col px-10 py-8">
-                  <button className='absolute top-4 right-6 rounded-full text-black font-semibold hover:bg-blue-50 py-0 px-2' onClick={closeModal}>X</button>
-                  <div className="text-xl text-black font-bold">Problema id</div>
-                  <p className='text-gray-400 font-normal'>Prédio id</p>
-                  <div className='py-5 space-y-1'>
-                    <div className='flex space-x-3'>
-                      <div className="text-gray-600 font-medium flex">Andar:</div>
-                      <div className='text-gray-500 font-normal flex'>Andar id</div>
+                <header className="flex flex-col">
+                  <div className="px-10 py-8">
+                    <button className='absolute top-4 right-6 rounded-full text-black font-semibold hover:bg-blue-50 py-0 px-2' onClick={closeModal}>X</button>
+                    <div className="text-xl text-black font-bold">Problema id</div>
+                    <p className='text-gray-400 font-normal'>Prédio id</p>
+                    <div className='py-5 space-y-1'>
+                      <div className='flex space-x-3'>
+                        <div className="text-gray-600 font-medium flex">Andar:</div>
+                        <div className='text-gray-500 font-normal flex'>Andar id</div>
+                      </div>
+                      <div className='flex space-x-3'>
+                        <div className="text-gray-600 font-medium">Espaço:</div>
+                        <div className='text-gray-500 font-normal flex'>Espaço id</div>
+                      </div>
+                      <div className='flex space-x-3'>
+                        <div className="text-gray-600 font-medium">Numeração:</div>
+                        <div className='text-gray-500 font-normal flex'>Numeração id</div>
+                      </div>
+                      <div className='flex space-x-3'>
+                        <div className="text-gray-600 font-medium">Categoria:</div>
+                        <div className='text-gray-500 font-normal flex'>Categoria id</div>
+                      </div>
+                      <div className='flex space-x-3'>
+                        <div className="text-gray-600 font-medium">Detalhes:</div>
+                        <div className='text-gray-500 font-normal flex'>Detalhes id</div>
+                      </div>
                     </div>
-                    <div className='flex space-x-3'>
-                      <div className="text-gray-600 font-medium">Espaço:</div>
-                      <div className='text-gray-500 font-normal flex'>Espaço id</div>
-                    </div>
-                    <div className='flex space-x-3'>
-                      <div className="text-gray-600 font-medium">Numeração:</div>
-                      <div className='text-gray-500 font-normal flex'>Numeração id</div>
-                    </div>
-                    <div className='flex space-x-3'>
-                      <div className="text-gray-600 font-medium">Categoria:</div>
-                      <div className='text-gray-500 font-normal flex'>Categoria id</div>
-                    </div>
-                    <div className='flex space-x-3'>
-                      <div className="text-gray-600 font-medium">Detalhes:</div>
-                      <div className='text-gray-500 font-normal flex'>Detalhes id</div>
-                    </div>
+                    <div className='text-gray-700 font-normal text-xs'>Problema reportado em:</div>
+                    <div className="text-gray-600 font-medium py-5">Comentários adicionais:</div>
+                    <div className="text-gray-600 font-medium top-28 left-72 absolute">N° de pessoas com o</div>
+                    <div className="text-gray-600 font-medium top-32 left-72 absolute">mesmo problema:</div>
+                    <div className="text-gray-700 font-normal top-32 right-6 absolute">3</div>
+                    <Authentification />
                   </div>
-                  <div className='text-gray-700 font-normal text-xs'>Problema reportado em:</div>
-                  <div className="text-gray-600 font-medium py-5">Comentários adicionais:</div>
-                  <div className="text-gray-600 font-medium top-28 left-72 absolute">N° de pessoas com o</div>
-                  <div className="text-gray-600 font-medium top-32 left-72 absolute">mesmo problema:</div>
-                  <div className="text-gray-700 font-normal top-32 right-6 absolute">3</div>
-                  <Authentification />
-                  <div className='bg-gray-700 shadow-2xl w-full h-32 container'>
-                    <div className='w-96 h-28 bg-white rounded-3xl'></div>
+                  <div className='bg-gray-200 w-full h-40 container mb-8 flex justify-center content-center'>
+                    <div className='w-96 h-28 bg-white rounded-3xl my-auto'></div>
                   </div>
                 </header>
               </div>
