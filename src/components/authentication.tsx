@@ -1,7 +1,6 @@
 import { Dialog, Transition } from "@headlessui/react"
-import Modal from "@mui/material/Modal";
 import React from "react";
-import { Fragment, useState } from "react"
+import { Fragment } from "react"
 
 function authentification() {
   const [isOpen, setIsOpen] = React.useState(false);
