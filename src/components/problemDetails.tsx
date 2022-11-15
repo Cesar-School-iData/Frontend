@@ -1,5 +1,4 @@
 import { Dialog, Transition } from '@headlessui/react'
-import Modal from '@mui/material/Modal';
 import React from "react";
 import { Fragment, useState } from 'react'
 import Authentification from '../components/authenticationDuplicate'
@@ -8,9 +7,6 @@ function authentification() {
   const [isOpen, setIsOpen] = React.useState(false);
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
-  const [isOpenSection, setIsOpenSection] = React.useState(false);
-  const openModalNextSection = () => setIsOpenSection(true);
-  const closeModalNextSection = () => setIsOpenSection(false);
 
   return (
     <>
@@ -54,12 +50,12 @@ function authentification() {
                         <div className='text-gray-500 font-normal flex'>Detalhes id</div>
                       </div>
                     </div>
-                    <div className='text-gray-700 font-normal text-xs'>Problema reportado em:</div>
-                    <div className="text-gray-600 font-medium py-5">Comentários adicionais:</div>
                     <div className="text-gray-600 font-medium top-28 left-72 absolute">N° de pessoas com o</div>
                     <div className="text-gray-600 font-medium top-32 left-72 absolute">mesmo problema:</div>
                     <div className="text-gray-700 font-normal top-32 right-6 absolute">3</div>
                     <Authentification />
+                    <div className='text-gray-700 font-normal text-xs'>Problema reportado em:</div>
+                    <div className="text-gray-600 font-medium py-5">Comentários adicionais:</div>
                   </div>
                   <div className='bg-gray-200 w-full h-40 container mb-8 flex justify-center content-center'>
                     <div className='w-96 h-28 bg-white rounded-3xl my-auto'></div>

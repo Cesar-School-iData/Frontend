@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Problem from './problemCard'
 
 function teste() {
-  const PROBLEM_BASE_URL = "http::localhost:8080/api/?"
+  const PROBLEM_BASE_URL = "http::localhost:8080/problema";
   const [problems, setProblems] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -13,7 +13,7 @@ function teste() {
         const response = await fetch(PROBLEM_BASE_URL, {
           method: "GET",
           headers: {
-            "Content-Type": "application / json",
+            "Content-Type": "application/json",
           },
         });
         const problems = await response.json();
