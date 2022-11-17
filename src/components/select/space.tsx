@@ -10,12 +10,12 @@ function select() {
     <Listbox as="div" value={selected} onChange={setSelected}>
       {({ open }) => (
         <>
-          <Listbox.Label className="text-lg text-gray-500 font-bold">
+          <Listbox.Label className="text-lg text-cinza-300 font-bold">
             Espaço
           </Listbox.Label>
           <div className="relative w-36 mt-2">
             <span className="inline-block w-full">
-              <Listbox.Button className="font-semibold pl-3 py-1 w-full text-left focus:outline-none focus:shadow-outline-blue focus:bg-gray-300 relative shadow-xl rounded-full bg-white text-gray-500">
+              <Listbox.Button className="font-semibold pl-3 py-1 w-full text-left focus:outline-none focus:shadow-outline-blue focus:bg-laranja-200 relative shadow-xl rounded-full bg-branco-200 text-cinza-300">
                 <span className="block truncate">{selected}</span>
               </Listbox.Button>
             </span>
@@ -27,15 +27,15 @@ function select() {
             >
               <Listbox.Options
                 static
-                className=" pl-1 py-1 w-full text-left border-gray-300 shadow-xl rounded-md"
+                className=" pl-1 py-1 w-full text-left border-cinza-200 shadow-xl rounded-md"
               >
-                {espacos.map((andar) => (
-                  <Listbox.Option key={andar} value={andar}>
+                {espacos.map((espaco) => (
+                  <Listbox.Option key={espaco} value={espaco}>
                     {({ selected, active }) => (
                       <div
                         className={`${active
-                          ? "text-white bg-slate-400"
-                          : "text-gray-900"
+                          ? "text-branco-100 bg-laranja-200"
+                          : "text-preto-100"
                           } cursor-default select-none relative py-2 pl-10 pr-4`}
                       >
                         <span className={`${selected ? "font-semibold" : "font-normal"}`}>{andar}</span>

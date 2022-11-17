@@ -4,7 +4,7 @@
 
 @layer components {
   .voteButtons {
-    @apply h-6 w-6 hover:bg-gray-200 p-1 rounded-full
+    @apply h-6 w-6 hover: bg-cinza-600 p-1 rounded-full
   }
 }
 

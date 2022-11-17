@@ -1,6 +1,9 @@
-import { Dialog, Transition } from "@headlessui/react"
+import { Dialog, Transition } from '@headlessui/react'
 import React from "react";
-import { Fragment } from "react"
+import TextField from '@mui/material/TextField';
+import { styled } from '@mui/system';
+import { Fragment } from 'react'
+import { generateKey } from 'crypto';
 
 function authentification() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -10,17 +13,14 @@ function authentification() {
   const openModalNextSection = () => setIsOpenSection(true);
   const closeModalNextSection = () => setIsOpenSection(false);
   const closeModals = () => {
-    closeModal()
-    closeModalNextSection()
+    closeModal();
+    closeModalNextSection();
   }
 
   return (
     <>
-      <div className="text-gray-400">
-        <button onClick={openModal} className="flex my-auto">
-          <img className="h-6 w-6 hover:bg-cinza-600 p-1 rounded-full hover:text-laranja-300" src="https://img.icons8.com/sf-regular/48/null/up.png" />
-          <span className="text-xs font-bold text-black my-auto">0</span>
-        </button>
+      <div className='flex justify-center sm:px-6 lg:px-8'>
+        <button className="text-cinza-200 bg-branco-200 border-cinza-200 border shadow-sm hover:border hover:border-preto-100 px-14 py-1 rounded-full" onClick={openModal}>Sou um administrador</button>
       </div>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" onClose={closeModals}>
@@ -38,11 +38,17 @@ function authentification() {
                   <button hidden={!isOpenSection} className="absolute top-2 left-4 rounded-full text-preto-100 font-semibold hover:bg-cinza-800 py-0 px-2" onClick={closeModalNextSection}>{"<"}</button>
                   <button className="absolute top-2 right-4 rounded-full text-preto-100 font-semibold hover:bg-cinza-800 py-0 px-2" onClick={closeModals}>X</button>
                   <p className="text-cinza-200 font-medium" hidden={isOpenSection}>Para prosseguir, por favor, informe o seu e-mail institucional</p>
-                  <p className="text-cinza-200 font-medium" hidden={!isOpenSection}>Deseja incluir um comentário adicional sobre o problema? <span className="text-cinza-900">(opcional)</span></p>
+                  <p className="text-cinza-200 font-medium" hidden={!isOpenSection}>Para prosseguir, por favor, informe a sua senha:</p>
                   <input placeholder="digite seu email aqui" type="text" name="email" className="w-full rounded-lg border mt-3 py-3 px-4 border-cinza-800" disabled={isOpenSection}></input>
-                  <textarea placeholder="digite aqui" className="resize-none w-full rounded-lg border mt-3 py-3 px-4 border-cinza-200" cols={30} rows={4} hidden={!isOpenSection}></textarea>
+                  <TextField
+                    id="outlined-password-input"
+                    type="password"
+                    hidden={!isOpenSection}
+                    autoComplete="current-password"
+                    placeholder="digite a sua senha"
+                  />
                   <button className="absolute bottom-11 inset-x-24 rounded-full text-branco-200 font-semibold bg-laranja-100 hover:border-branco-200 border-laranja-100 py-2 px-5" onClick={openModalNextSection} hidden={isOpenSection}>Avançar</button>
-                  <button className="absolute bottom-11 inset-x-24 rounded-full text-branco-200 font-semibold bg-laranja-100 hover:border-branco-200 border-laranja-100 py-2 px-5" onClick={closeModals} hidden={!isOpenSection}>Concluir</button>
+                  <button className="absolute bottom-11 inset-x-24 rounded-full text-branco-200 font-semibold bg-laranja-100 hover:border-branco-200 border-laranja-100 py-2 px-5" onClick={closeModals} hidden={!isOpenSection}>Entrar</button>
                   <div className={`${!isOpenSection ? "bg-laranja-100" : "bg-cinza-800"} rounded-full h-3 w-3 absolute bottom-3 inset-x-44`}></div>
                   <div className={`${isOpenSection ? "bg-laranja-100" : "bg-cinza-800"} rounded-full h-3 w-3 absolute bottom-3 inset-x-52`}></div>
                 </header>
