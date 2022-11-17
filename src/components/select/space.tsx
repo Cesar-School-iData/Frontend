@@ -38,7 +38,7 @@ function select() {
                           : "text-preto-100"
                           } cursor-default select-none relative py-2 pl-10 pr-4`}
                       >
-                        <span className={`${selected ? "font-semibold" : "font-normal"}`}>{andar}</span>
+                        <span className={`${selected ? "font-semibold" : "font-normal"}`}>{espaco}</span>
                       </div>
                     )}
                   </Listbox.Option>
