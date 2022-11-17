@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import React from "react";
 import { Fragment, useState } from 'react'
-import Authentification from '../components/authenticationDuplicate'
+import Authentification from './authen/authenticationDuplicate'
 
 function authentification() {
   const [isOpen, setIsOpen] = React.useState(false);
